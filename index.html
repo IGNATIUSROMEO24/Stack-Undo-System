@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack-Based Undo System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="tag">DATA STRUCTURES PROJECT</p>
+      <h1>Text Editor with Undo</h1>
+      <p class="intro">A small demonstration of how a stack can help a user undo changes while typing.</p>
+    </header>
+
+    <section class="card">
+      <label for="editor">Type or edit your text below</label>
+      <textarea id="editor" rows="8" placeholder="Start typing here..."></textarea>
+      <div class="buttons">
+        <button id="saveBtn">Save current state</button>
+        <button id="undoBtn" class="secondary">Undo last saved state</button>
+        <button id="clearBtn" class="danger">Clear text</button>
+      </div>
+      <p id="message" role="status">Ready. Save a state before making a change to try the undo feature.</p>
+    </section>
+
+    <section class="card">
+      <div class="stack-heading">
+        <h2>Undo stack</h2>
+        <span id="stackCount" class="count">0 saved state(s)</span>
+      </div>
+      <p class="small">Each saved state is pushed onto the stack. Undo removes the most recent state first (Last In, First Out).</p>
+      <ol id="stackList" class="stack-list">
+        <li class="empty">No saved states yet.</li>
+      </ol>
+    </section>
+    <footer>Student project: Stack data structure • HTML, CSS and JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
